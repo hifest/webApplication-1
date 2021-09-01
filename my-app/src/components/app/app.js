@@ -12,13 +12,20 @@ import './css/post-list-item.css';
 import './css/post-list.css';
 import './css/post-status-filter.css';
 import './css/search-panel.css';
-const App = () =>{
+const App = () =>{ 
+
 
     const data = [
+        'asasassa',
         {label: "Going to learn React", important: true,id: 'asahfasd'},
         {label: "That is so good", important: true,id: 'sdfsdf'},
         {label: "i need a break...-_-", important: false,id:'asdasdasd'},
     ];
+
+    let newData = data.filter(function(item){
+        return typeof item === 'object'; //homework
+    });
+
     return(
 <div className='app'>
 <AppHeader/>
@@ -26,7 +33,7 @@ const App = () =>{
             <SearchPanel></SearchPanel>
             <PostStatusFilter></PostStatusFilter>
         </div>
-        <PostList posts={data}></PostList>
+        <PostList posts={newData}></PostList>
         <PostAddForm/>
 </div>
     )

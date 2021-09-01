@@ -49,14 +49,3 @@ export default class PostListItem extends Component{
     }   
 
 }
-
-const isSquare = function(n){
-    n = Math.sqrt(n)
-    if(n % 1 === 0 && n > 0){
-        return true
-    }else{
-        return false
-    }
-
-  }
- console.log(isSquare(0 * 0)) 
