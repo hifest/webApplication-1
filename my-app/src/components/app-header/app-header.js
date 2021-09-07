@@ -1,10 +1,10 @@
 import React from 'react'
 
-const AppHeader = () =>{
+const AppHeader = ({like,allPosts}) =>{
     return (
         <div className="app-header d-flex">
             <h1>Valeriy bagriy</h1>
-            <h2>5 записей, из них понравилось 0</h2>
+            <h2>{allPosts} записей, из них понравилось {like}</h2>
         </div>
     )
 
